@@ -73,8 +73,27 @@ New-NetFirewallRule -DisplayName "$FirewallRuleName UDP" -Direction Inbound -Pro
 New-NetFirewallRule -DisplayName "$FirewallRuleName App" -Direction Inbound -Program $ExePath -Action Allow -Profile Any | Out-Null
 Write-Host "        Firewall Port 9999 TCP+UDP allowed" -ForegroundColor DarkGray
 
-# Step 5: Shortcuts
-Write-Host "  [5/5] Creating shortcuts..." -ForegroundColor Green
+# Step 5: Virtual Gamepad Driver (ViGEmBus) for Mobile Gaming
+Write-Host "  [5/6] Checking Gaming Driver (ViGEmBus)..." -ForegroundColor Green
+$vigemSvc = Get-Service -Name "ViGEmBus" -ErrorAction SilentlyContinue
+if (-not $vigemSvc) {
+    Write-Host "        Downloading and installing ViGEmBus driver..." -ForegroundColor DarkGray
+    $VigemUrl = "https://github.com/nefarius/ViGEmBus/releases/download/v1.22.0/ViGEmBus_1.22.0_x64_x86_arm64.exe"
+    $VigemTemp = "$env:TEMP\ViGEmBus_Setup.exe"
+    try {
+        Invoke-WebRequest -Uri $VigemUrl -OutFile $VigemTemp -UseBasicParsing
+        Start-Process -FilePath $VigemTemp -ArgumentList "/passive /norestart" -Wait
+        Remove-Item $VigemTemp -Force -ErrorAction SilentlyContinue
+        Write-Host "        ViGEmBus Gamepad driver installed successfully" -ForegroundColor DarkGray
+    } catch {
+        Write-Host "        [!] ViGEmBus installation skipped (Optional)" -ForegroundColor DarkGray
+    }
+} else {
+    Write-Host "        ViGEmBus Gamepad driver is already installed" -ForegroundColor DarkGray
+}
+
+# Step 6: Shortcuts
+Write-Host "  [6/6] Creating shortcuts..." -ForegroundColor Green
 $WshShell = New-Object -ComObject WScript.Shell
 $sc = $WshShell.CreateShortcut($ShortcutD)
 $sc.TargetPath = $ExePath; $sc.WorkingDirectory = $AppFolder; $sc.WindowStyle = 1; $sc.Save()

@@ -1,7 +1,7 @@
 {
-  "version_code": 2,
-  "version_name": "1.0",
-  "release_notes": "• 4 connection modes: Wi-Fi, Bluetooth, QR, Global\n• Premium dark UI with animations\n• Gamepad, Mouse, Keyboard, Media controls\n• Onboarding screen for new users",
+  "version_code": 12,
+  "version_name": "2.0",
+  "release_notes": "• Global Remote Access via Cloudflare Secure Tunnel (Connect from 4G/5G anywhere)\n• Animated Circular Progress Bar (1% to 100%) during connection\n• Celebratory Connection Pop-up with live PC telemetry & quick actions\n• Full Mechanical PC Keyboard with landscape layout & elevated keys\n• Ultra-low latency Trackpad & 60FPS Live Screen Monitoring\n• Windows 1-Click All-in-One Installer & Portable distribution",
   "update_url": "https://play.google.com/store/apps/details?id=com.pro.zenithremote",
   "force_update": false
 }

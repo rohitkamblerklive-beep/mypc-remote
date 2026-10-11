@@ -176,14 +176,30 @@
   <h2 class="dl-title">Install MyPC Remote Server</h2>
   <p class="dl-sub">Choose any method &mdash; all are 100% free with zero Windows restrictions.</p>
 
-  <!-- METHOD 1 -->
+  <!-- METHOD 1: ALL-IN-ONE WINDOWS INSTALLER -->
   <div class="dl-method recommended">
-    <div class="dl-badge">&#9889; RECOMMENDED &middot; ZERO WARNINGS</div>
+    <div class="dl-badge">&#9889; RECOMMENDED &middot; ALL-IN-ONE SETUP</div>
     <div class="dl-method-header">
-      <div class="dl-icon ps">&#128187;</div>
+      <div class="dl-icon exe">&#128187;</div>
       <div>
-        <h3>Method 1 &mdash; 1-Command PowerShell Installer</h3>
-        <p>Auto-installs with Firewall rules &amp; Desktop shortcut. No browser, no SmartScreen warning.</p>
+        <h3>Method 1 &mdash; All-in-One Windows Setup Installer</h3>
+        <p>Complete installer with PC Server, ViGEmBus Gamepad Driver, and Auto-Firewall configuration.</p>
+      </div>
+    </div>
+    <p class="dl-desc">Standard Windows Setup wizard. Bundles <strong>MyPC Remote Server</strong> and the official <strong>ViGEmBus Virtual Gamepad Driver</strong>. Automatically configures Windows Firewall, adds Desktop &amp; Start Menu shortcuts, and gets your PC 100% ready for Trackpad, Keyboard, and Xbox Gamepad emulation in 1 click.</p>
+    <a href="https://github.com/rohitkamblerklive-beep/mypc-remote/releases/latest/download/MyPC_Remote_Setup.exe" class="btn-primary" style="padding: 14px 32px; font-size: 15px; text-decoration: none;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>
+      Download All-in-One Setup (56 MB)
+    </a>
+  </div>
+
+  <!-- METHOD 2: 1-COMMAND POWERSHELL -->
+  <div class="dl-method">
+    <div class="dl-method-header">
+      <div class="dl-icon ps">&#9889;</div>
+      <div>
+        <h3>Method 2 &mdash; 1-Command PowerShell Auto Installer</h3>
+        <p>Auto-installs with Firewall rules &amp; Desktop shortcut directly from PowerShell.</p>
       </div>
     </div>
     <p class="dl-desc">Windows PowerShell is built into every Windows 10/11 PC. This single command downloads the server, installs it to <code style="color:var(--cyan);font-size:12px">C:\Program Files\MyPC Remote\</code>, opens Port 9999 in Windows Firewall, creates a Desktop shortcut, and optionally launches the server &mdash; all in under 30 seconds.</p>
@@ -199,42 +215,36 @@
     </div>
   </div>
 
-  <!-- METHOD 2 -->
+  <!-- METHOD 3: PORTABLE ZIP -->
   <div class="dl-method">
     <div class="dl-method-header">
       <div class="dl-icon zip">&#128230;</div>
       <div>
-        <h3>Method 2 &mdash; Portable ZIP Package</h3>
+        <h3>Method 3 &mdash; Portable ZIP Package</h3>
         <p>No install needed. Extract and run. Browsers download ZIP with zero warnings.</p>
       </div>
     </div>
     <p class="dl-desc">ZIP files are always allowed by Chrome, Edge, and Windows Defender. Extract the folder anywhere on your PC and double-click <strong>Start_MyPC_Remote_Server.bat</strong>. A built-in batch script auto-adds the Windows Firewall rule on first run &mdash; no manual steps needed.</p>
     <a href="https://github.com/rohitkamblerklive-beep/mypc-remote/releases/latest/download/MyPC_Remote_Server.zip" class="btn-dl-zip">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>
-      Download ZIP Package (11 MB)
+      Download ZIP Package (56 MB)
     </a>
   </div>
 
-  <!-- METHOD 3 -->
+  <!-- METHOD 4: STANDALONE GAMEPAD DRIVER -->
   <div class="dl-method">
     <div class="dl-method-header">
-      <div class="dl-icon exe">&#129695;</div>
+      <div class="dl-icon exe" style="background:rgba(108,99,255,0.15);">&#127918;</div>
       <div>
-        <h3>Method 3 &mdash; Direct .EXE File</h3>
-        <p>Single portable executable. May show a one-time SmartScreen notice (see guide).</p>
+        <h3>Gaming Engine Driver &mdash; ViGEmBus Setup</h3>
+        <p>Required only for Xbox Controller &amp; Gamepad Emulation in PC Games.</p>
       </div>
     </div>
-    <p class="dl-desc">Direct standalone EXE. If Windows SmartScreen shows a blue warning on first run, this is normal for unsigned open-source software. It is completely safe &mdash; follow the 2-click guide below to proceed.</p>
-    <a href="https://github.com/rohitkamblerklive-beep/mypc-remote/releases/latest/download/MyPC_Remote_Server.exe" class="btn-dl-exe">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>
-      Download .EXE File (38 MB)
+    <p class="dl-desc">If you already have the server and want to enable Pro Gaming Xbox 360 controller emulation for games like GTA V, FIFA, and Forza, install the official ViGEmBus driver once.</p>
+    <a href="https://github.com/nefarius/ViGEmBus/releases/download/v1.22.0/ViGEmBus_1.22.0_x64_x86_arm64.exe" class="btn-secondary" style="font-size:14px; padding:12px 24px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v-2H5v2z"/></svg>
+      Download ViGEmBus Driver (10 MB)
     </a>
-    <div class="exe-guide">
-      <p>
-        &#128737;&#65039; <strong>Windows SmartScreen Warning?</strong> &mdash; Click <strong style="color:#fff">"More info"</strong> &rarr; then <strong style="color:#fff">"Run anyway"</strong>. This appears only once for new open-source software and is completely safe.<br/>
-        &#127760; <strong>Browser "Dangerous file" warning?</strong> &mdash; Click the <strong style="color:#fff">&#11015; Downloads icon</strong> in Chrome/Edge &rarr; <strong style="color:#fff">"Keep"</strong> &rarr; <strong style="color:#fff">"Keep anyway"</strong>.
-      </p>
-    </div>
   </div>
 
   <div class="safe-badges">
